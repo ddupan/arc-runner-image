@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "description": "Floating node:24 tag: digest bumps are security rebuilds; merge them once the image builds.",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["docker.io/library/node"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": true
+    }
+  ]
+}

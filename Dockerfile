@@ -3,7 +3,7 @@
 # toolchains homelab jobs need, so jobs do not download them over the flaky WAN on every run. Unused
 # images are reclaimed by kubelet's image GC, which a node-local tool cache would not be.
 # Anything a job needs at a specific version still comes from actions/setup-* in that job.
-FROM docker.io/library/node:24-bookworm-slim@sha256:873f586f3794f52281bd039bf02c048a0be08fde619338f9941bad1eb6b34530 AS node
+FROM docker.io/library/node:26-bookworm-slim@sha256:0042e17d232a87a2cd485be1da7900fca4d10a4ad11b29e9285da1d2e54798c9 AS node
 
 FROM ghcr.io/actions/actions-runner:2.338.2@sha256:6d0b2d80d80f143f77dcb676e50920100bbb547e39e883454d57f45ab8c31300
 LABEL org.opencontainers.image.source=https://github.com/ddupan/arc-runner-image
